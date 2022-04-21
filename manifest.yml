@@ -1,0 +1,17 @@
+---
+name: Jupyter
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  This app will launch a [Jupyter] server using [Python] on the Koios HPC system.<br>
+  Default python environment contains\:
+  <ul>
+  <li><b>Python3</b></li>
+  <li><b>Sci-Py bundle</b> <small>( beniget, Bottleneck, deap, gast, mpi4py, mpmath, numexpr, numpy, pandas, ply, pythran, scipy) </small></li>
+  <li><b>Matplotlib</b></li>
+  <li><b>Numba</b></li>
+  </ul>
+
+  [Jupyter]: https://jupyter.org/
+  [Python]: https://www.python.org/

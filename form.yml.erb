@@ -1,0 +1,43 @@
+---
+
+cluster: "koios"
+
+attributes:
+
+  modules: "lang/SciPy-bundle/2021.10-foss-2021b tools/JupyterLab/3.1.6-GCCcore-11.2.0"
+
+  extra_jupyter_args: ""
+
+  custom_cores_cnt:
+    label: Core count
+    help: select a core count from the drop-down
+    widget: select
+    options:
+      - [ "4 cores", "4" ]
+      - [ "8 cores", "8" ]
+      - [ "16 cores", "16" ]
+      - [ "32 cores", "32" ]
+      - [ "64 cores", "64" ]
+  mode:
+    widget: "radio"
+    value: "1"
+    options:
+      - ["Jupyter Lab", "1"]
+      - ["Jupyter Notebook", "0"]
+
+  jupyterlab_version:
+    label: JupyterLab module version
+    widget: select
+    options:
+      - [ "JupyterLab 3.2.8 + Python 3.9.5 @GCC 10.3.0" , "tools/JupyterLab/3.2.8-GCCcore-10.3.0 lang/SciPy-bundle/2021.05-foss-2021a vis/matplotlib/3.4.2-foss-2021a lang/numba/0.53.1-foss-2021a" ]
+      - [ "JupyterLab 3.1.6 + Python 3.9.6 @GCC 11.2.0" , "tools/JupyterLab/3.1.6-GCCcore-11.2.0 lang/SciPy-bundle/2021.10-foss-2021b vis/matplotlib/3.4.3-foss-2021b" ]
+
+form:
+#  - modules
+  - extra_jupyter_args
+  - bc_num_hours
+  - custom_cores_cnt
+  - mode
+  - jupyterlab_version
+
+

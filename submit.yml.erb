@@ -1,0 +1,11 @@
+---
+batch_connect:
+  template: "basic"
+#  conn_params:
+#          - jupyter_api
+
+script:
+  native:
+    - "-N 1"
+    - "--cpus-per-task"
+    - "<%= custom_cores_cnt %>"

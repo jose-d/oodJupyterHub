@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+<%-
+  require 'pathname'
+-%>
+
+echo "Starting main script..."
+echo "TTT - $(date)"
+
+#
+# Start Jupyter server
+#
+#
+module purge
+
+# Load the require modules
+module load <%= context.jupyterlab_version %>
+
+# List loaded modules
+module list
+
+export JUPYTER_PATH="${PWD}/share/jupyter:${OSC_JUPYTER_PATH}"
+
+echo "TTT - $(date)"
+
+# List available kernels for debugging purposes
+set -x
+jupyter kernelspec list
+{ set +x; } 2>/dev/null
+echo "TTT - $(date)"
+
+# Launch the Jupyter server
+set -x
+jupyter <%= context.mode == "1" ? "lab" : "notebook" %> --config="${CONFIG_FILE}"
