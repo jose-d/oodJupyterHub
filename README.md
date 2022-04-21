@@ -1,6 +1,7 @@
 # oodJupyterHub
 
-An interactive app designed for OSC OnDemand that launches a Jupyter server within an Slurm batch job
+An interactive app designed for OSC OnDemand that launches a Jupyter server within an Slurm batch job.
+Original: https://github.com/OSC/bc_osc_jupyter.
 
 ## Prerequisites
 
